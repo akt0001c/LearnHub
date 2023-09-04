@@ -16,7 +16,7 @@ class Instructor(models.Model):
    ]
     
 
-    InstructorName= models.CharField(max_length=20)
+    instructorName = models.CharField(max_length=20)
     gender= models.CharField(max_length=15,choices=GENDER_CHOICES)
     date_of_birth= models.DateField()
     department= models.CharField(max_length=30,choices=MAJOR_CHOICES)

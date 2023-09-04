@@ -1,11 +1,10 @@
-from rest_framework.routers import DefaultRouter
-from .views import InstructorViewSet
 from django.urls import path,include
-
-router = DefaultRouter()
-router.register(r'instructors', InstructorViewSet)
-
+from rest_framework.urlpatterns import format_suffix_patterns
+from instructorapp import views
 urlpatterns=[
-    path('',include(router.urls)),
-    
+    path('instructors/',views.InstructorList.as_view()),
+    path('instructors/<int:pk>',views.InstructorCrud.as_view()),
 ]
+
+urlpatterns= format_suffix_patterns(urlpatterns)
+
