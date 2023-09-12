@@ -19,7 +19,7 @@ class EnrollmentSerializer(serializers.ModelSerializer):
 class AssignmentSerializer(serializers.ModelSerializer):
     class Meta:
         model=models.Assignment
-        fields=['id','title','description','due_date','course']
+        fields=['id','title','description','due_date','course','assignment_content']
 
 class SubmissionSerializer(serializers.ModelSerializer):
     class Meta:
