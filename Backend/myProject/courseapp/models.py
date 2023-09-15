@@ -38,7 +38,7 @@ class Assignment(models.Model):
     description = models.TextField()
     due_date = models.DateField()
     course = models.ForeignKey(Course, on_delete=models.CASCADE)
-    assignment_content= models.JSONField()
+    assignment_content= models.JSONField(default=dict)
     class Meta:
          db_table="Assignment"
 

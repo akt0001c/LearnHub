@@ -4,7 +4,7 @@ from courseapp import models
 class DepartmentSerializer(serializers.ModelSerializer):
     class Meta:
         model=models.Department
-        fields=['id','parent_department']
+        fields=['id','deptName','parent_department']
 
 class CourseSerializer(serializers.ModelSerializer):
     class Meta:

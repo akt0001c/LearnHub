@@ -52,7 +52,7 @@ class InstructorCrud(APIView):
     def delete(self,request,pk,format=None):
         instructor= self.get_object(pk)
         instructor.delete()
-        return Response(status=status.HTTP_204_NO_CONTENT)
+        return Response(status=status.HTTP_200_OK)
 
 
 
